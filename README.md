@@ -1,6 +1,8 @@
 InstaReadability
 =================
 
+[![Build Status](https://travis-ci.org/wmernagh/insta_readability.png)](https://travis-ci.org/wmernagh/insta_readability)
+
 Uploads bookmarks to Readability.com from an Instapaper CSV export
 
 Installation

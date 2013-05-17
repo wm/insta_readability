@@ -1,0 +1,11 @@
+rvm:
+  - 1.9.3
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: 2a9d318b71ced12989e8a0eb2bd25008
+
+script: rspec spec
