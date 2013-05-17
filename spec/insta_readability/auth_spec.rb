@@ -5,6 +5,8 @@ describe InstaReadability::Auth do
   let(:consumer) { stub(:get_access_token) }
 
   before do
+    InstaReadability.configure
+
     @old_stdout = $stdout
     @old_stdin  = $stdin
     $stdin      = StringIO.new

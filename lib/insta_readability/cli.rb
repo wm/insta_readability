@@ -19,7 +19,7 @@ module InstaReadability
         return
       end
 
-      parser   = InstaReadability::InstapaperParser.new csv_path
+      parser   = InstaReadability.configuration.parser.new csv_path
       importer = InstaReadability::Importer.new(instance.auth.token, instance.auth.secret)
       importer.import parser.create_bookmarks
     end

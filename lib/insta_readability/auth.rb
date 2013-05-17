@@ -1,12 +1,11 @@
 require 'highline/import'
 require 'oauth'
 require 'readit'
-require '~/.insta_readability'
 
 module InstaReadability
   class Auth
     def self.get_access_token
-      uname = highline.ask ("Username: ")
+      uname  = highline.ask ("Username: ")
       passwd = highline.ask ("Password: ") {|q| q.echo = false}
 
       consumer = ::OAuth::Consumer.new(Readit::Config.consumer_key, Readit::Config.consumer_secret, :site=>"https://www.readability.com/", :access_token_path => "/api/rest/v1/oauth/access_token/")

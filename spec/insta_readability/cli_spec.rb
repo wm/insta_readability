@@ -5,6 +5,7 @@ describe InstaReadability::CLI, '.run' do
   subject(:cli)      { InstaReadability::CLI }
 
   before do
+    InstaReadability.configure
     @old_stderr = $stderr
     $stderr = StringIO.new
     InstaReadability::Auth.stubs(:get_access_token).returns access_token
