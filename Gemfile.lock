@@ -46,7 +46,6 @@ GEM
     unf (0.1.1)
       unf_ext
     unf_ext (0.0.6)
-    vcr (2.4.0)
     webrobots (0.1.1)
 
 PLATFORMS
@@ -59,4 +58,3 @@ DEPENDENCIES
   mocha
   readit!
   rspec
-  vcr
