@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'readit',:git=>'git@github.com:29decibel/readit.git'
+gem 'readit'
 gem 'highline'
 
 gem 'rspec'
