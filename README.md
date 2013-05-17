@@ -16,10 +16,10 @@ Dependancies
 You will need to have a Readability Key and Secret in a file as follows:
 
     ```
-    # ~/.insta_readability.rb
+    # ~/.insta_readability
 
-    Readit::Config.consumer_key = 'somename'
-    Readit::Config.consumer_secret = 'someSHA'
+    api_key = 'somename'
+    api_secret = 'someSHA'
 
     ```
 

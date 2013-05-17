@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-require 'insta_readability'
-
-InstaReadability::CLI.run ARGV[0]

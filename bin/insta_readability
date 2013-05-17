@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+require 'insta_readability'
+
+InstaReadability.configure do |config|
+  conf_file = File.expand_path '~/.insta_readability'
+  unless File.exists?(conf_file) then
+    puts "Missing file #{conf_file} - see README"
+    exit 1
+  end
+
+  IO.foreach(conf_file) do |line|
+    next if line.match(/^#/) || line.match(/^$/)
+
+    variable, value = line.to_s.gsub(' ', '').split('=')
+
+    case variable
+    when 'api_key'
+      config.api_key = value.chomp
+    when 'api_secret'
+      config.api_secret = value.chomp
+    when 'parser'
+      config.parser = value
+    else
+      puts "invalid file: #{conf_file}"
+      exit 2
+    end
+  end
+end
+
+InstaReadability::CLI.run ARGV[0]
